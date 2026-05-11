@@ -4,7 +4,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/cc-api-switcher-cli/ccsw/internal/app"
+	"github.com/zhouyeyu/cc-api-switcher-cli/internal/app"
 )
 
 func newStore(t *testing.T) *Store {

@@ -10,7 +10,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/cc-api-switcher-cli/ccsw/internal/app"
+	"github.com/zhouyeyu/cc-api-switcher-cli/internal/app"
 )
 
 // envLineRE matches `export KEY=VAL`, `KEY=VAL`, with optional whitespace.

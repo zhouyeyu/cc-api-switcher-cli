@@ -8,7 +8,7 @@ package main
 import (
 	"os"
 
-	"github.com/cc-api-switcher-cli/ccsw/internal/cli"
+	"github.com/zhouyeyu/cc-api-switcher-cli/internal/cli"
 )
 
 func main() {

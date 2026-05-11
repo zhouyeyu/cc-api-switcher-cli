@@ -7,9 +7,9 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/cc-api-switcher-cli/ccsw/internal/app"
-	"github.com/cc-api-switcher-cli/ccsw/internal/fsutil"
-	"github.com/cc-api-switcher-cli/ccsw/internal/store"
+	"github.com/zhouyeyu/cc-api-switcher-cli/internal/app"
+	"github.com/zhouyeyu/cc-api-switcher-cli/internal/fsutil"
+	"github.com/zhouyeyu/cc-api-switcher-cli/internal/store"
 )
 
 func runInit(_ []string) int {

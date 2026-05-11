@@ -12,7 +12,7 @@ import (
 
 // Version is the released version string. It is overridden at build time via
 //
-//	go build -ldflags "-X github.com/cc-api-switcher-cli/ccsw/internal/cli.Version=v0.1.0"
+//	go build -ldflags "-X github.com/zhouyeyu/cc-api-switcher-cli/internal/cli.Version=v0.1.0"
 var Version = "dev"
 
 const usage = `ccsw - switch API providers for AI CLIs (Claude Code, Codex)

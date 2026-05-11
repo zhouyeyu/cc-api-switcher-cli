@@ -13,7 +13,7 @@ ccsw use claude deepseek
 
 ```bash
 # Go 1.21+ が必要
-go install github.com/cc-api-switcher-cli/ccsw/cmd/ccsw@latest
+go install github.com/zhouyeyu/cc-api-switcher-cli/cmd/ccsw@latest
 
 # PATH に追加（初回のみ）
 echo 'export PATH="$HOME/go/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
