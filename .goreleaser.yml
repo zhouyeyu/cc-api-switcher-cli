@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+version: 2
+
+project_name: ccsw
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: ccsw
+    main: ./cmd/ccsw
+    binary: ccsw
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    # Inject version at build time so `ccsw version` prints the tag.
+    ldflags:
+      - -s -w
+      - -X github.com/cc-api-switcher-cli/ccsw/internal/cli.Version={{.Version}}
+    # Windows executables get .exe automatically via goreleaser.
+
+archives:
+  - id: default
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    files:
+      - README.md
+      - README.zh.md
+      - README.ja.md
+      - LICENSE
+
+checksum:
+  name_template: "checksums.txt"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^chore:"
+      - Merge pull request
+      - Merge branch
+
+release:
+  github:
+    owner: "{{ .Env.GITHUB_REPOSITORY_OWNER }}"
+    name: cc-api-switcher-cli
+  draft: false
+  prerelease: auto   # tags like v1.0.0-beta are marked pre-release automatically
+  name_template: "ccsw {{.Tag}}"
