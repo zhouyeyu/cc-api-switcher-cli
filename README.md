@@ -1,5 +1,7 @@
 # ccsw — AI CLI API Switcher
 
+[English](README.md) | [中文](README.zh.md) | [日本語](README.ja.md)
+
 Switch API providers for AI command-line tools (Claude Code, Codex) in one command.
 Zero dependencies. Single static binary. Scriptable.
 

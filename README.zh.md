@@ -1,5 +1,7 @@
 # ccsw — AI CLI API 切换工具
 
+[English](README.md) | [中文](README.zh.md) | [日本語](README.ja.md)
+
 一条命令，在不同 API 供应商之间切换 AI 命令行工具（Claude Code、Codex）的配置。
 零依赖，单一静态二进制，可脚本化。
 
